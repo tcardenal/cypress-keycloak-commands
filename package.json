@@ -1,7 +1,7 @@
 {
   "name": "@davidanderlohr/cypress-keycloak-commands",
-  "version": "1.0.1",
-  "description": "Cypress commands for login with Keycloak",
+  "version": "1.0.2",
+  "description": "Cypress commands for login with Keycloak, with scopes",
   "main": "dist/index.js",
   "files": [
     "dist",

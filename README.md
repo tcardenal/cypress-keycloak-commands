@@ -22,13 +22,7 @@ Cypress commands for login with [Keycloak](https://www.keycloak.org/).
 Install the package using npm:
 
 ```
-npm i -D @david.anderlohr/cypress-keycloak-commands
-```
-
-or Yarn:
-
-```
-yarn add -D @david.anderlohr/cypress-keycloak-commands
+npm i -D @davidanderlohr/cypress-keycloak-commands
 ```
 
 Import the package in the file `cypress/support/commands.js` (or `cypress/support/commands.ts`):
