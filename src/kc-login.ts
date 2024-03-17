@@ -7,12 +7,13 @@ Cypress.Commands.add("kcLogin", (user: string) => {
     const authBaseUrl = Cypress.env("auth_base_url");
     const realm = Cypress.env("auth_realm");
     const client_id = Cypress.env("auth_client_id");
+    const scopes = Cypress.env("auth_scopes");
 
     cy.request({
       url: `${authBaseUrl}/realms/${realm}/protocol/openid-connect/auth`,
       followRedirect: false,
       qs: {
-        scope: "openid",
+        scope: scopes,
         response_type: "code",
         approval_prompt: "auto",
         redirect_uri: Cypress.config("baseUrl"),
