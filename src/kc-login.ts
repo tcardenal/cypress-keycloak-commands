@@ -8,6 +8,7 @@ Cypress.Commands.add("kcLogin", (user: string) => {
     const realm = Cypress.env("auth_realm");
     const client_id = Cypress.env("auth_client_id");
     const scopes = Cypress.env("auth_scopes");
+    const redirectUri = Cypress.env("login_redirect_uri") ?? Cypress.config("baseUrl");
 
     cy.request({
       url: `${authBaseUrl}/realms/${realm}/protocol/openid-connect/auth`,
@@ -16,7 +17,7 @@ Cypress.Commands.add("kcLogin", (user: string) => {
         scope: scopes,
         response_type: "code",
         approval_prompt: "auto",
-        redirect_uri: Cypress.config("baseUrl"),
+        redirect_uri: redirectUri,
         client_id
       }
     })
@@ -46,7 +47,7 @@ Cypress.Commands.add("kcLogin", (user: string) => {
           url: `${authBaseUrl}/realms/${realm}/protocol/openid-connect/token`,
           body: {
             client_id,
-            redirect_uri: Cypress.config("baseUrl"),
+            redirect_uri: redirectUri,
             code,
             grant_type: "authorization_code"
           },
