@@ -1,5 +1,5 @@
 {
-  "name": "@davidanderlohr/cypress-keycloak-commands",
+  "name": "cypress-keycloak-commands",
   "version": "1.0.2",
   "description": "Cypress commands for login with Keycloak, with scopes",
   "main": "dist/index.js",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davidanderlohr/cypress-keycloak-commands.git"
+    "url": "git+https://github.com/tcardenal/cypress-keycloak-commands.git"
   },
   "keywords": [
     "cypress",
@@ -32,9 +32,9 @@
   "author": "Gianluca Frediani <gianluca.frediani@outlook.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/davidanderlohr/cypress-keycloak-commands/issues"
+    "url": "https://github.com/tcardenal/cypress-keycloak-commands/issues"
   },
-  "homepage": "https://github.com/davidanderlohr/cypress-keycloak-commands#readme",
+  "homepage": "https://github.com/tcardenal/cypress-keycloak-commands#readme",
   "dependencies": {},
   "devDependencies": {
     "@cypress/webpack-preprocessor": "^4.1.1",
